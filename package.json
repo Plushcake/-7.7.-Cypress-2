@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "cypress": "^10.11.0"
+  },
+  "name": "7.7.-cypress-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "cypress open",
+    "test:all": "cypress run --record --key 22e64a68-783e-4e4a-b3a2-7d8d3c4ca3c7",
+    "test:swagger": "cypress run --spec cypress/e2e/TestSwagger.cy.js --record --key 22e64a68-783e-4e4a-b3a2-7d8d3c4ca3c7"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
