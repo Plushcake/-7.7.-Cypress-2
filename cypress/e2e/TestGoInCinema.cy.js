@@ -80,6 +80,6 @@ describe.only("UI test", () => {
 
     cy.get(":nth-child(2) > .ticket__details").should("be.visible");
     cy.get(".acceptin-button").should("be.visible").and("not.be.disabled");
-    cy.get(":nth-child(6) > .ticket__details").should("have.text", "200");
+    cy.get(":nth-child(6) > .ticket__details").should("have.text", "300");
   });
 });

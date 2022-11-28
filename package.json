@@ -7,7 +7,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "test": "cypress open",
+    "test": "cypress open --browser edge --config-file cypress.desktop.js",
     "test:all": "cypress run --record --key 22e64a68-783e-4e4a-b3a2-7d8d3c4ca3c7",
     "test:swagger": "cypress run --spec cypress/e2e/TestSwagger.cy.js --record --key 22e64a68-783e-4e4a-b3a2-7d8d3c4ca3c7"
   },
