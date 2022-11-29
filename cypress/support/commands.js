@@ -40,7 +40,7 @@ Cypress.Commands.add("createUser", (user) => {
     method: "POST",
     url: "https://petstore.swagger.io/v2/user",
     body: {
-      //id: "string",
+      id: 1,
       username: "string",
       firstName: "string",
       lastName: "string",
