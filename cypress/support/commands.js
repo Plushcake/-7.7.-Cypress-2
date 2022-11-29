@@ -34,3 +34,27 @@ Cypress.Commands.add("login", (email, password) => {
 
   cy.contains("Авторизоваться").click();
 });
+
+Cypress.Commands.add("createUser", (user) => {
+  cy.request({
+    method: "POST",
+    url: "https://petstore.swagger.io/v2/user",
+    body: {
+      //id: "string",
+      username: "string",
+      firstName: "string",
+      lastName: "string",
+      email: "string",
+      password: "string",
+      phone: "string",
+      userStatus: 1,
+    },
+  }).then((resp) => {
+    cy.request({
+      method: "POST",
+      url: "https://petstore.swagger.io/v2/user",
+      headers: { Authorization: "Bearer " + resp.body.token },
+      body: user,
+    });
+  });
+});
