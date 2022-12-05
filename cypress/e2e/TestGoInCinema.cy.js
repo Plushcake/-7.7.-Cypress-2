@@ -44,7 +44,7 @@ describe.only("UI test", () => {
 
   it("Choosing a seat", () => {
     cy.get(
-      ":nth-child(2) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
+      ":nth-child(1) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
     ).click();
 
     const seats = require("../fixtures/seats/normal.json");
@@ -57,7 +57,7 @@ describe.only("UI test", () => {
   });
   it("We check the reserved place", () => {
     cy.get(
-      ":nth-child(2) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
+      ":nth-child(1) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
     ).click();
 
     cy.get(".acceptin-button")
@@ -66,7 +66,7 @@ describe.only("UI test", () => {
   });
   it("Hall 4 Booking Test", () => {
     cy.get(
-      ":nth-child(2) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
+      ":nth-child(1) > :nth-child(3) > .movie-seances__list > .movie-seances__time-block > .movie-seances__time"
     ).click();
 
     const seats = require("../fixtures/seats/normal.json");

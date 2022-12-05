@@ -58,3 +58,33 @@ Cypress.Commands.add("createUser", (user) => {
     });
   });
 });
+
+Cypress.Commands.add("createPet", (pet) => {
+  cy.request({
+    method: "POST",
+    url: "https://petstore.swagger.io/v2/pet",
+    body: {
+      id: 1,
+      category: {
+        id: 0,
+        name: "string",
+      },
+      name: "doggie",
+      photoUrls: ["string"],
+      tags: [
+        {
+          id: 0,
+          name: "string",
+        },
+      ],
+      status: "available",
+    },
+  }).then((resp) => {
+    cy.request({
+      method: "POST",
+      url: "https://petstore.swagger.io/v2/pet",
+      headers: { Authorization: "Bearer " + resp.body.token },
+      body: pet,
+    });
+  });
+});
